@@ -7,162 +7,232 @@
 <title>Naveen & Deekshi | Wedding Invitation</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#f5eee6;color:#612c36;font-family:Georgia,'Times New Roman',serif}
+body{margin:0;background:#f8f0e7;color:#672d3a;font-family:Georgia,serif}
 button{font:inherit;cursor:pointer}
-.page{min-height:100vh;padding:28px 16px 40px}
-.welcome{min-height:100vh;background:radial-gradient(circle at top,#853c4b,#451521 75%);display:flex;align-items:center;justify-content:center;text-align:center;padding:25px}
-.welcome-card{width:min(100%,390px);background:#fff8ef;border:1px solid #d8b78d;padding:36px 22px 32px;position:relative;box-shadow:0 15px 45px #210b1480}
-.welcome-card:before,.welcome-card:after{content:"✿ ❧ ✿";display:block;color:#a36c69;font-size:21px;letter-spacing:8px}
-.welcome-card:before{margin-bottom:22px}
-.welcome-card:after{margin-top:22px}
-.small{font-size:11px;letter-spacing:3px;text-transform:uppercase}
-.names{font-size:clamp(36px,10vw,52px);font-weight:normal;line-height:1.15;margin:18px 0;color:#752d3c}
-.heart{color:#a66a66;font-size:23px}
-.date{font-size:16px;letter-spacing:2px;margin:22px 0}
-.open-btn{border:1px solid #d5b48e;background:#752d3c;color:#fff7ed;padding:15px 24px;letter-spacing:2px;font-size:12px}
-.open-btn:active{transform:scale(.98)}
 .hidden{display:none!important}
-.invitation{max-width:620px;margin:auto;text-align:center;background:#fff9f1;border:1px solid #dfc8b1;box-shadow:0 8px 35px #5b27301a;overflow:hidden}
-.hero{padding:32px 20px 24px;background:#f8eee4}
-.ornament{font-size:28px;color:#9b6867;letter-spacing:6px}
-h1{font-size:clamp(36px,9vw,55px);font-weight:normal;margin:18px 0 8px;color:#752d3c}
-.subtitle{letter-spacing:3px;font-size:11px}
-.photo-frame{margin:20px auto;width:min(80%,310px);padding:9px;border:1px solid #c8a17e;background:#fff}
+#welcome{
+ min-height:100vh;display:flex;align-items:center;justify-content:center;
+ padding:25px 16px;background:#4b1725;
+ background-image:radial-gradient(ellipse at center,#783447,#39111d 80%);
+ overflow:hidden
+}
+.welcome-card{
+ width:min(100%,410px);min-height:590px;position:relative;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;
+ text-align:center;padding:35px 20px;color:#722f3d;
+ background:#fff8ee;border:2px solid #d8b58d;
+ box-shadow:0 12px 45px #17060b80
+}
+.welcome-card:before{
+ content:"❀  ❧  ✿  ❧  ❀";color:#b17a7a;font-size:20px;
+ letter-spacing:3px;position:absolute;top:18px
+}
+.welcome-card:after{
+ content:"❀  ❧  ✿  ❧  ❀";color:#b17a7a;font-size:20px;
+ letter-spacing:3px;position:absolute;bottom:18px
+}
+.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase}
+.names{font-weight:normal;font-size:43px;line-height:1.2;margin:17px 0}
+.heart{color:#a65c68;font-size:23px}
+.date{letter-spacing:2px;font-size:15px;margin:18px 0 24px}
+.envelope-wrap{width:270px;max-width:90%;margin:25px auto 22px}
+.envelope{
+ position:relative;height:175px;background:#702b3b;
+ border:1px solid #d5b18a;box-shadow:0 12px 22px #4c1b2830;
+ perspective:700px
+}
+.envelope:before{
+ content:"";position:absolute;inset:0;
+ background:linear-gradient(145deg,#8e4351,#682434 70%);
+ clip-path:polygon(0 0,50% 58%,100% 0)
+}
+.envelope:after{
+ content:"";position:absolute;inset:0;
+ background:linear-gradient(35deg,#5b1d2b,#8b3c4b);
+ clip-path:polygon(0 100%,0 0,50% 58%,100% 0,100% 100%)
+}
+.flap{
+ position:absolute;inset:0 0 auto;height:100%;
+ background:#843747;clip-path:polygon(0 0,100% 0,50% 62%);
+ transform-origin:top;transition:transform .9s;z-index:3;
+ border-top:1px solid #d8b58d
+}
+.seal{
+ position:absolute;z-index:4;left:50%;top:51%;transform:translate(-50%,-50%);
+ width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
+ background:#ead4b7;border:2px solid #bd8d72;color:#7c3040;font-size:25px;
+ box-shadow:0 2px 8px #35101d70
+}
+.envelope.open .flap{transform:rotateX(180deg);z-index:0}
+.envelope.open .seal{opacity:0;transition:opacity .2s}
+.floral{font-size:28px;letter-spacing:4px;color:#e5c6ac;line-height:1.8}
+.open-btn{
+ background:#722d3d;color:#fff7ed;border:1px solid #d6b58d;
+ padding:15px 24px;letter-spacing:2px;font-size:12px
+}
+.open-btn:active{transform:scale(.98)}
+#fullInvitation{padding:22px 12px 35px}
+.invitation{
+ max-width:620px;margin:auto;text-align:center;background:#fff9f1;
+ border:1px solid #d9bea5;box-shadow:0 8px 35px #5b27301a;overflow:hidden
+}
+.hero{padding:30px 18px;background:#f7ece1}
+.ornament{font-size:25px;letter-spacing:5px;color:#a66d72}
+h1{font-weight:normal;font-size:clamp(34px,8vw,49px);margin:15px 0;color:#752d3c}
+.subtitle{font-size:11px;letter-spacing:2px}
+.photo-frame{width:min(82%,310px);margin:22px auto;padding:8px;border:1px solid #c7a17d;background:white}
 .photo-frame img{display:block;width:100%;height:auto;max-height:390px;object-fit:cover}
-.section{padding:27px 20px;border-top:1px solid #ead9c8}
-.section h2{font-weight:normal;font-size:27px;color:#752d3c;margin:7px 0 13px}
-.date-big{font-size:20px;letter-spacing:1px}
+.section{padding:26px 18px;border-top:1px solid #ead9c8}
+.section h2{font-weight:normal;font-size:27px;margin:9px 0 13px}
+.date-big{font-size:20px}
 .time{font-size:17px;margin:12px 0}
 .venue{line-height:1.8}
-.countdown{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:20px}
-.unit{min-width:67px;padding:12px 8px;background:#f3e6db;border:1px solid #e4cdb8}
+.countdown{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:20px 0}
+.unit{min-width:66px;padding:12px 8px;background:#f3e6db;border:1px solid #e4cdb8}
 .unit strong{display:block;font-size:25px;font-weight:normal}
 .unit span{font-size:10px;letter-spacing:1px;text-transform:uppercase}
 .links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
-.links a,.links button{display:inline-block;padding:12px 15px;background:#752d3c;color:#fff8ef;text-decoration:none;border:1px solid #752d3c;font-size:12px}
-.footer{padding:28px 16px;background:#752d3c;color:#fff4e9;line-height:1.8}
+.links a,.links button{padding:12px 14px;background:#752d3c;color:#fff8ef;text-decoration:none;border:1px solid #752d3c;font-size:12px}
 .note{font-size:13px;line-height:1.8}
-@media(prefers-reduced-motion:no-preference){.welcome-card{animation:appear 1s ease-out}@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}}
+.footer{padding:26px 15px;background:#752d3c;color:#fff4e9;line-height:1.8}
+@media(max-width:360px){.names{font-size:36px}.welcome-card{min-height:550px}}
 </style>
 </head>
 <body>
 
-<section class="welcome" id="welcome">
-  <div class="welcome-card">
-    <div class="small">Together with our families</div>
-    <div class="heart">♥</div>
-    <h1 class="names">Naveen<br><span style="font-size:25px">&</span><br>Deekshi</h1>
-    <div class="small">Invite you to celebrate our love</div>
-    <p class="date">15 · NOVEMBER · 2026</p>
-    <button class="open-btn" onclick="openInvitation()">OPEN INVITATION ♡</button>
+<section id="welcome">
+ <div class="welcome-card">
+  <div class="eyebrow">Together with our families</div>
+  <div class="floral">❀ ❧ 🌸 ❧ ❀</div>
+  <p class="eyebrow">A celebration of love</p>
+  <h1 class="names">Naveen<br><span style="font-size:25px">&</span><br>Deekshi</h1>
+  <p class="date">15 · NOVEMBER · 2026</p>
+
+  <div class="envelope-wrap">
+   <div class="envelope" id="envelope">
+    <div class="flap"></div>
+    <div class="seal">♥</div>
+   </div>
   </div>
+
+  <button class="open-btn" onclick="openInvitation()">OPEN YOUR INVITATION ♡</button>
+  <div class="floral" style="margin-top:18px">❀ ❧ ✿ ❧ ❀</div>
+ </div>
 </section>
 
-<main class="page hidden" id="fullInvitation">
-  <article class="invitation">
-    <header class="hero">
-      <div class="ornament">❧ ✿ ❧</div>
-      <p class="small">With love and blessings</p>
-      <h1>Naveen & Deekshi</h1>
-      <p class="subtitle">A NEW CHAPTER · A LIFETIME OF LOVE</p>
-      <div class="photo-frame">
-        <img src="couple-photo.jpg" alt="Naveen and Deekshi together" onerror="this.alt='Please check the couple-photo.jpg filename in GitHub';this.style.minHeight='100px'">
-      </div>
-      <p class="note">Two hearts, one beautiful journey.<br>We would be honoured to have you with us.</p>
-      <div class="ornament">❀ ❧ ❀</div>
-    </header>
+<main id="fullInvitation" class="hidden">
+ <article class="invitation">
+  <header class="hero">
+   <div class="ornament">❧ ❀ ❧</div>
+   <p class="eyebrow">With love and blessings</p>
+   <h1>Naveen & Deekshi</h1>
+   <p class="subtitle">A NEW CHAPTER · A LIFETIME OF LOVE</p>
+   <div class="photo-frame">
+    <img src="couple-photo.jpg" alt="Naveen and Deekshi together">
+   </div>
+   <p class="note">Two hearts, one beautiful journey.<br>We would be honoured to have you with us.</p>
+   <div class="ornament">❀ ❧ ✿ ❧ ❀</div>
+  </header>
 
-    <section class="section">
-      <p class="small">The celebrations begin</p>
-      <h2>Wedding Reception</h2>
-      <p class="date-big">14 November 2026</p>
-      <p class="time">7:00 PM onwards</p>
-      <p class="venue">Kalaingar Kottam<br>Kattur, Thiruvarur</p>
-    </section>
+  <section class="section">
+   <div class="ornament">❧ ❀ ❧</div>
+   <p class="eyebrow">The celebrations begin</p>
+   <h2>Wedding Reception</h2>
+   <p class="date-big">14 November 2026</p>
+   <p class="time">7:00 PM onwards</p>
+   <p class="venue">Kalaingar Kottam<br>Kattur, Thiruvarur</p>
+  </section>
 
-    <section class="section">
-      <p class="small">The day we begin forever</p>
-      <h2>Our Wedding</h2>
-      <p class="date-big">15 November 2026</p>
-      <p class="time">Muhurtham · 7:00 AM – 8:30 AM</p>
-      <p class="venue">Kalaingar Kottam<br>Kattur, Thiruvarur</p>
-      <div class="links">
-        <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Kalaingar+Kottam%2C+Kattur%2C+Thiruvarur">GET DIRECTIONS ↗</a>
-      </div>
-    </section>
+  <section class="section">
+   <div class="ornament">❧ ❀ ❧</div>
+   <p class="eyebrow">The day we begin forever</p>
+   <h2>Our Wedding</h2>
+   <p class="date-big">15 November 2026</p>
+   <p class="time">Muhurtham · 7:00 AM – 8:30 AM</p>
+   <p class="venue">Kalaingar Kottam<br>Kattur, Thiruvarur</p>
+   <div class="links">
+    <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Kalaingar+Kottam%2C+Kattur%2C+Thiruvarur">GET DIRECTIONS ↗</a>
+   </div>
+  </section>
 
-    <section class="section">
-      <p class="small">Every second brings us closer</p>
-      <h2>Counting Down to Forever</h2>
-      <div class="countdown" id="countdown">
-        <div class="unit"><strong id="days">--</strong><span>Days</span></div>
-        <div class="unit"><strong id="hours">--</strong><span>Hours</span></div>
-        <div class="unit"><strong id="minutes">--</strong><span>Minutes</span></div>
-        <div class="unit"><strong id="seconds">--</strong><span>Seconds</span></div>
-      </div>
-      <p class="note" id="countdownMessage"></p>
-    </section>
+  <section class="section">
+   <div class="ornament">❀ ❧ ❀</div>
+   <p class="eyebrow">Every second brings us closer</p>
+   <h2>Counting Down to Forever</h2>
+   <div class="countdown" id="countdown">
+    <div class="unit"><strong id="days">--</strong><span>Days</span></div>
+    <div class="unit"><strong id="hours">--</strong><span>Hours</span></div>
+    <div class="unit"><strong id="minutes">--</strong><span>Minutes</span></div>
+    <div class="unit"><strong id="seconds">--</strong><span>Seconds</span></div>
+   </div>
+   <p class="note" id="countdownMessage"></p>
+  </section>
 
-    <section class="section">
-      <p class="note">Your presence, love and blessings will make our special day even more memorable.</p>
-      <div class="links">
-        <button onclick="downloadCalendar()">SAVE BOTH DATES ♡</button>
-        <button onclick="shareInvitation()">SHARE INVITATION ↗</button>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="ornament" style="color:#f0d7bc">❧ ✿ ❧</div>
-      <p>With love,<br><strong>Naveen & Deekshi</strong></p>
-      <p class="small">15 November 2026 · Forever begins</p>
-    </footer>
-  </article>
+  <section class="section">
+   <p class="note">Your presence, love and blessings will make our special day even more memorable.</p>
+   <div class="links">
+    <button onclick="downloadCalendar()">SAVE BOTH DATES ♡</button>
+    <button onclick="shareInvitation()">SHARE INVITATION ↗</button>
+   </div>
+  </section>
+
+  <footer class="footer">
+   <div class="ornament" style="color:#f0d7bc">❧ ❀ ❧</div>
+   <p>With love,<br><strong>Naveen & Deekshi</strong></p>
+   <p class="eyebrow">15 November 2026 · Forever begins</p>
+  </footer>
+ </article>
 </main>
 
 <script>
 function openInvitation(){
+ const envelope=document.getElementById("envelope");
+ envelope.classList.add("open");
+ setTimeout(()=>{
   document.getElementById("welcome").classList.add("hidden");
   document.getElementById("fullInvitation").classList.remove("hidden");
   window.scrollTo(0,0);
   history.replaceState(null,"","#invitation");
-  updateCountdown();
+ },650);
 }
 function updateCountdown(){
-  const target=new Date("2026-11-15T07:00:00+05:30").getTime();
-  const remaining=target-Date.now();
-  if(remaining<=0){
-    document.getElementById("countdown").innerHTML="<p>Our forever begins! ♥</p>";
-    document.getElementById("countdownMessage").textContent="With love, Naveen & Deekshi";
-    return;
-  }
-  document.getElementById("days").textContent=Math.floor(remaining/86400000);
-  document.getElementById("hours").textContent=Math.floor(remaining/3600000)%24;
-  document.getElementById("minutes").textContent=Math.floor(remaining/60000)%60;
-  document.getElementById("seconds").textContent=Math.floor(remaining/1000)%60;
+ const target=new Date("2026-11-15T07:00:00+05:30").getTime();
+ const remaining=target-Date.now();
+ if(remaining<=0){
+  document.getElementById("countdown").innerHTML="<p>Our forever begins! ♥</p>";
+  document.getElementById("countdownMessage").textContent="With love, Naveen & Deekshi";
+  return;
+ }
+ document.getElementById("days").textContent=Math.floor(remaining/86400000);
+ document.getElementById("hours").textContent=Math.floor(remaining/3600000)%24;
+ document.getElementById("minutes").textContent=Math.floor(remaining/60000)%60;
+ document.getElementById("seconds").textContent=Math.floor(remaining/1000)%60;
 }
 function downloadCalendar(){
-  const events=[
-    ["reception","20261114T133000Z","20261114T153000Z","Wedding Reception - Naveen & Deekshi"],
-    ["wedding","20261115T013000Z","20261115T030000Z","Wedding of Naveen & Deekshi"]
-  ];
-  const lines=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Naveen and Deekshi//EN","CALSCALE:GREGORIAN"];
-  events.forEach(e=>{
-    lines.push("BEGIN:VEVENT","UID:"+e[0]+"-naveen-deekshi-2026@example.com","DTSTAMP:20261023T000000Z","DTSTART:"+e[1],"DTEND:"+e[2],"SUMMARY:"+e[3],"LOCATION:Kalaingar Kottam, Kattur, Thiruvarur","END:VEVENT");
-  });
-  lines.push("END:VCALENDAR");
-  const blob=new Blob([lines.join("\r\n")],{type:"text/calendar;charset=utf-8"});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement("a");a.href=url;a.download="Naveen-Deekshi-Events.ics";a.click();
-  setTimeout(()=>URL.revokeObjectURL(url),1000);
+ const events=[
+  ["reception","20261114T133000Z","20261114T153000Z","Reception - Naveen & Deekshi"],
+  ["wedding","20261115T013000Z","20261115T030000Z","Wedding - Naveen & Deekshi"]
+ ];
+ const lines=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Naveen and Deekshi//EN","CALSCALE:GREGORIAN"];
+ events.forEach(e=>lines.push("BEGIN:VEVENT","UID:"+e[0]+"-deekshi-2026@example.com","DTSTAMP:20261023T000000Z","DTSTART:"+e[1],"DTEND:"+e[2],"SUMMARY:"+e[3],"LOCATION:Kalaingar Kottam, Kattur, Thiruvarur","END:VEVENT"));
+ lines.push("END:VCALENDAR");
+ const blob=new Blob([lines.join("\r\n")],{type:"text/calendar;charset=utf-8"});
+ const url=URL.createObjectURL(blob);
+ const a=document.createElement("a");a.href=url;a.download="Naveen-Deekshi-Events.ics";a.click();
+ setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 function shareInvitation(){
-  const data={title:"Naveen & Deekshi - Wedding Invitation",text:"Join us for our wedding on 15 November 2026 and reception on 14 November 2026.",url:location.href.split("#")[0]};
-  if(navigator.share)navigator.share(data).catch(()=>{});
-  else if(navigator.clipboard)navigator.clipboard.writeText(data.url).then(()=>alert("Invitation link copied!")).catch(()=>prompt("Copy your invitation link:",data.url));
-  else prompt("Copy your invitation link:",data.url);
+ const data={title:"Naveen & Deekshi - Wedding Invitation",text:"Join us for our wedding on 15 November 2026 and reception on 14 November 2026.",url:location.href.split("#")[0]};
+ if(navigator.share)navigator.share(data).catch(()=>{});
+ else if(navigator.clipboard)navigator.clipboard.writeText(data.url).then(()=>alert("Invitation link copied!")).catch(()=>prompt("Copy your invitation link:",data.url));
+ else prompt("Copy your invitation link:",data.url);
 }
 updateCountdown();
 setInterval(updateCountdown,1000);
-if(location.hash==="#invitation")openInvitation();
+if(location.hash==="#invitation"){
+ document.getElementById("welcome").classList.add("hidden");
+ document.getElementById("fullInvitation").classList.remove("hidden");
+}
 </script>
 </body>
 </html>
