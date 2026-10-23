@@ -163,6 +163,33 @@ function downloadCalendar() {
   a.click();
   URL.revokeObjectURL(a.href);
 }
+  
+function updateWeddingCountdown() {
+  const weddingDate = new Date("2026-11-15T07:00:00+05:30").getTime();
+  const now = Date.now();
+  const remaining = weddingDate - now;
+  const countdown = document.getElementById("wedding-countdown");
+
+  if (remaining <= 0) {
+    countdown.innerHTML = "<h3>Our forever begins! 💍</h3>";
+    return;
+  }
+
+  document.getElementById("cd-days").textContent =
+    Math.floor(remaining / (1000 * 60 * 60 * 24));
+
+  document.getElementById("cd-hours").textContent =
+    Math.floor((remaining / (1000 * 60 * 60)) % 24);
+
+  document.getElementById("cd-minutes").textContent =
+    Math.floor((remaining / (1000 * 60)) % 60);
+
+  document.getElementById("cd-seconds").textContent =
+    Math.floor((remaining / 1000) % 60);
+}
+
+updateWeddingCountdown();
+setInterval(updateWeddingCountdown, 1000);
 </script>
 </body>
 </html>
