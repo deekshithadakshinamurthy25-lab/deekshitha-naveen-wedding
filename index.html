@@ -112,7 +112,8 @@
     </div>
     <p class="blessing">Your presence and blessings will make our special day even more beautiful.</p>
     <div class="actions">
-      <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Kalaingar+Kottam%2C+Kattur%2C+Thiruvarur">Get directions ↗</a>
+      
+<a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Kalaingar+Kottam%2C+Kattur%2C+Thiruvarur">Get directions ↗</a>
       <button class="btn" onclick="shareInvite()">Share invitation ↗</button>
       <button class="btn" onclick="downloadCalendar()">Save date</button>
     </div>
@@ -127,18 +128,40 @@ function shareInvite() {
   else if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(() => alert("Invitation link copied!"));
   else prompt("Copy your invitation link:", location.href);
 }
+
 function downloadCalendar() {
   const ics = [
-    "BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Wedding Invitation//EN","CALSCALE:GREGORIAN",
-    "BEGIN:VEVENT","UID:deekshitha-naveenkumar-wedding-20261115@example.com",
-    "DTSTAMP:20261022T000000Z","DTSTART:20261115T013000Z","DTEND:20261115T030000Z",
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Deekshitha and Naveenkumar//EN",
+    "CALSCALE:GREGORIAN",
+    "BEGIN:VEVENT",
+    "UID:reception-20261114@example.com",
+    "DTSTAMP:20261023T000000Z",
+    "DTSTART:20261114T133000Z",
+    "DTEND:20261114T153000Z",
+    "SUMMARY:Reception of Deekshitha & Naveenkumar",
+    "LOCATION:Kalaingar Kottam, Kattur, Thiruvarur",
+    "END:VEVENT",
+    "BEGIN:VEVENT",
+    "UID:wedding-20261115@example.com",
+    "DTSTAMP:20261023T000000Z",
+    "DTSTART:20261115T013000Z",
+    "DTEND:20261115T030000Z",
     "SUMMARY:Wedding of Deekshitha & Naveenkumar",
     "LOCATION:Kalaingar Kottam, Kattur, Thiruvarur",
-    "DESCRIPTION:Wedding celebration of Deekshitha and Naveenkumar.",
-    "END:VEVENT","END:VCALENDAR"
+    "END:VEVENT",
+    "END:VCALENDAR"
   ].join("\r\n");
-  const blob = new Blob([ics], {type:"text/calendar;charset=utf-8"});
-  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "Deekshitha-Naveenkumar-Wedding.ics"; a.click(); URL.revokeObjectURL(a.href);
+
+  const blob = new Blob([ics], {
+    type: "text/calendar;charset=utf-8"
+  });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "Deekshitha-Naveenkumar-Wedding.ics";
+  a.click();
+  URL.revokeObjectURL(a.href);
 }
 </script>
 </body>
