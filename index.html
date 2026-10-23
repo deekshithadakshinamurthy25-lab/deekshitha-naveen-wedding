@@ -1,213 +1,168 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#fbf3f0">
-<meta name="description" content="Wedding invitation for Deekshitha and Naveenkumar — 15 November 2026, Kalaingar Kottam, Kattur, Thiruvarur.">
-<title>Deekshitha & Naveenkumar | Wedding Invitation</title>
+<title>Naveen & Deekshi | Wedding Invitation</title>
 <style>
-  :root { --ink:#55484b; --rose:#b77d87; --sage:#899c88; --cream:#fffaf7; --line:#e9d9d7; }
-  * { box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body {
-    margin:0; color:var(--ink); font-family: Georgia, "Times New Roman", serif;
-    background:
-      radial-gradient(ellipse at 5% 5%, #f4e3e3 0, transparent 30%),
-      radial-gradient(ellipse at 95% 95%, #e4ecdf 0, transparent 32%),
-      #fbf5f1;
-  }
-  .page { min-height:100vh; padding:22px 14px 34px; display:flex; justify-content:center; align-items:center; }
-  .invite {
-    position:relative; width:min(760px,100%); overflow:hidden; text-align:center;
-    background:rgba(255,250,247,.94); border:1px solid #dfc7c8; outline:1px solid #eadbd7;
-    outline-offset:-9px; padding:clamp(34px,7vw,68px) clamp(22px,7vw,70px);
-    box-shadow:0 18px 60px rgba(105,75,75,.10); border-radius:5px;
-  }
-  .floral { position:absolute; width:150px; height:150px; opacity:.78; pointer-events:none; }
-  .tl { top:0; left:0; } .br { bottom:0; right:0; transform:rotate(180deg); }
-  .eyebrow { letter-spacing:.24em; text-transform:uppercase; font:11px/1.8 Arial,sans-serif; color:#927d7f; }
-  .tiny-flower { color:var(--rose); font-size:23px; margin:16px 0 12px; }
-  h1 { font-weight:400; font-size:clamp(39px,8vw,68px); line-height:1.02; margin:12px 0; color:#9c6875; }
-  .amp { display:block; font-size:27px; color:#9b9d85; font-style:italic; margin:7px 0; }
-  .intro { max-width:460px; margin:22px auto 18px; font-size:16px; line-height:1.8; }
-  .rule { width:90px; height:1px; background:#d9b9bb; margin:25px auto; }
-  .date { font-size:clamp(23px,4.8vw,34px); letter-spacing:.045em; margin:8px 0; }
-  .day { font:12px Arial,sans-serif; letter-spacing:.22em; text-transform:uppercase; color:#8a9b85; }
-  .details { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:26px auto 0; max-width:520px; }
-  .detail { padding:14px 10px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-  .detail strong { display:block; font:11px Arial,sans-serif; letter-spacing:.16em; text-transform:uppercase; color:#9a737b; margin-bottom:9px; }
-  .detail span { display:block; font-size:16px; line-height:1.65; }
-  .venue { font-size:18px !important; }
-  .blessing { font-style:italic; font-size:16px; line-height:1.8; margin:28px auto 10px; max-width:430px; }
-  .actions { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:25px; font-family:Arial,sans-serif; }
-  .btn { border:1px solid #c89fa4; border-radius:999px; background:#fffaf7; color:#76565e; padding:12px 17px; font-size:12px; letter-spacing:.04em; text-decoration:none; cursor:pointer; }
-  .btn.primary { background:#b77d87; color:white; border-color:#b77d87; }
-  .footer { margin-top:26px; font:10px Arial,sans-serif; color:#a39795; letter-spacing:.12em; text-transform:uppercase; }
-  @media(max-width:520px) {
-    .details { grid-template-columns:1fr; gap:12px; }
-    .detail { padding:13px 8px; }
-    .floral { width:105px; height:105px; }
-    .intro { font-size:15px; }
-  }
-  @media print { body { background:white; } .page { padding:0; } .invite { box-shadow:none; } .actions { display:none; } }
+*{box-sizing:border-box}
+body{margin:0;background:#f5eee6;color:#612c36;font-family:Georgia,'Times New Roman',serif}
+button{font:inherit;cursor:pointer}
+.page{min-height:100vh;padding:28px 16px 40px}
+.welcome{min-height:100vh;background:radial-gradient(circle at top,#853c4b,#451521 75%);display:flex;align-items:center;justify-content:center;text-align:center;padding:25px}
+.welcome-card{width:min(100%,390px);background:#fff8ef;border:1px solid #d8b78d;padding:36px 22px 32px;position:relative;box-shadow:0 15px 45px #210b1480}
+.welcome-card:before,.welcome-card:after{content:"✿ ❧ ✿";display:block;color:#a36c69;font-size:21px;letter-spacing:8px}
+.welcome-card:before{margin-bottom:22px}
+.welcome-card:after{margin-top:22px}
+.small{font-size:11px;letter-spacing:3px;text-transform:uppercase}
+.names{font-size:clamp(36px,10vw,52px);font-weight:normal;line-height:1.15;margin:18px 0;color:#752d3c}
+.heart{color:#a66a66;font-size:23px}
+.date{font-size:16px;letter-spacing:2px;margin:22px 0}
+.open-btn{border:1px solid #d5b48e;background:#752d3c;color:#fff7ed;padding:15px 24px;letter-spacing:2px;font-size:12px}
+.open-btn:active{transform:scale(.98)}
+.hidden{display:none!important}
+.invitation{max-width:620px;margin:auto;text-align:center;background:#fff9f1;border:1px solid #dfc8b1;box-shadow:0 8px 35px #5b27301a;overflow:hidden}
+.hero{padding:32px 20px 24px;background:#f8eee4}
+.ornament{font-size:28px;color:#9b6867;letter-spacing:6px}
+h1{font-size:clamp(36px,9vw,55px);font-weight:normal;margin:18px 0 8px;color:#752d3c}
+.subtitle{letter-spacing:3px;font-size:11px}
+.photo-frame{margin:20px auto;width:min(80%,310px);padding:9px;border:1px solid #c8a17e;background:#fff}
+.photo-frame img{display:block;width:100%;height:auto;max-height:390px;object-fit:cover}
+.section{padding:27px 20px;border-top:1px solid #ead9c8}
+.section h2{font-weight:normal;font-size:27px;color:#752d3c;margin:7px 0 13px}
+.date-big{font-size:20px;letter-spacing:1px}
+.time{font-size:17px;margin:12px 0}
+.venue{line-height:1.8}
+.countdown{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:20px}
+.unit{min-width:67px;padding:12px 8px;background:#f3e6db;border:1px solid #e4cdb8}
+.unit strong{display:block;font-size:25px;font-weight:normal}
+.unit span{font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.links a,.links button{display:inline-block;padding:12px 15px;background:#752d3c;color:#fff8ef;text-decoration:none;border:1px solid #752d3c;font-size:12px}
+.footer{padding:28px 16px;background:#752d3c;color:#fff4e9;line-height:1.8}
+.note{font-size:13px;line-height:1.8}
+@media(prefers-reduced-motion:no-preference){.welcome-card{animation:appear 1s ease-out}@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}}
 </style>
 </head>
 <body>
-<main class="page">
-  <article class="invite">
-    <svg class="floral tl" viewBox="0 0 160 160" aria-hidden="true">
-      <g fill="none" stroke="#9ba88e" stroke-width="1.5">
-        <path d="M-8 10 Q35 30 44 74 T91 112"/><path d="M16 20 Q42 10 53 37 Q30 42 16 20Z"/>
-        <path d="M36 48 Q64 28 75 55 Q52 63 36 48Z"/><path d="M55 76 Q80 54 94 80 Q72 91 55 76Z"/>
-        <path d="M18 50 Q2 65 21 80 Q32 65 18 50Z"/>
-      </g>
-      <g fill="#e6c1c7" stroke="#c9909b" stroke-width="1">
-        <ellipse cx="30" cy="9" rx="8" ry="15" transform="rotate(-35 30 9)"/>
-        <ellipse cx="42" cy="8" rx="8" ry="15" transform="rotate(35 42 8)"/>
-        <ellipse cx="36" cy="20" rx="8" ry="15"/>
-        <circle cx="36" cy="15" r="5" fill="#d9b17d" stroke="none"/>
-        <ellipse cx="78" cy="31" rx="7" ry="13" transform="rotate(-45 78 31)"/>
-        <ellipse cx="91" cy="33" rx="7" ry="13" transform="rotate(40 91 33)"/>
-        <ellipse cx="85" cy="44" rx="7" ry="13"/>
-        <circle cx="85" cy="38" r="4" fill="#d9b17d" stroke="none"/>
-      </g>
-    </svg>
-    <svg class="floral br" viewBox="0 0 160 160" aria-hidden="true">
-      <g fill="none" stroke="#9ba88e" stroke-width="1.5">
-        <path d="M-8 10 Q35 30 44 74 T91 112"/><path d="M16 20 Q42 10 53 37 Q30 42 16 20Z"/>
-        <path d="M36 48 Q64 28 75 55 Q52 63 36 48Z"/><path d="M55 76 Q80 54 94 80 Q72 91 55 76Z"/>
-        <path d="M18 50 Q2 65 21 80 Q32 65 18 50Z"/>
-      </g>
-      <g fill="#e6c1c7" stroke="#c9909b" stroke-width="1">
-        <ellipse cx="30" cy="9" rx="8" ry="15" transform="rotate(-35 30 9)"/>
-        <ellipse cx="42" cy="8" rx="8" ry="15" transform="rotate(35 42 8)"/>
-        <ellipse cx="36" cy="20" rx="8" ry="15"/>
-        <circle cx="36" cy="15" r="5" fill="#d9b17d" stroke="none"/>
-        <ellipse cx="78" cy="31" rx="7" ry="13" transform="rotate(-45 78 31)"/>
-        <ellipse cx="91" cy="33" rx="7" ry="13" transform="rotate(40 91 33)"/>
-        <ellipse cx="85" cy="44" rx="7" ry="13"/>
-        <circle cx="85" cy="38" r="4" fill="#d9b17d" stroke="none"/>
-      </g>
-    </svg>
-    <div class="eyebrow">Together with our families</div>
-    <div class="tiny-flower">✿</div>
-    <p class="intro">With hearts full of love and gratitude, we invite you to celebrate the beginning of our forever.</p>
-    <h1>Deekshitha</h1>
-    <span class="amp">&</span>
-    <h1>Naveenkumar</h1>
-    <div class="rule"></div>
-    <div class="day">Sunday</div>
-    <div class="date">15 November 2026</div>
-    <div class="details">
-      
-      
-<div style="margin:20px 0; padding:18px; border:1px solid #d8c5b2; border-radius:14px; background:#fffaf5; text-align:center;">
-  <p style="margin:0 0 8px; color:#986b65; letter-spacing:2px;">14 NOVEMBER 2026</p>
-  <h3 style="margin:0 0 8px; color:#795650;">Wedding Reception</h3>
-  <p style="margin:0; color:#795650;">7:00 PM onwards</p>
-  <p style="margin:8px 0 0; color:#795650;">Kalaingar Kottam, Kattur, Thiruvarur</p>
-</div>
-<div style="margin:24px 0; padding:18px 12px; border:1px solid #d8c5b2; border-radius:16px; background:#fffaf5; text-align:center;">
-  <p style="margin:0 0 8px; color:#986b65; letter-spacing:2px; font-size:12px;">COUNTING DOWN TO FOREVER</p>
-  <h3 style="margin:0 0 14px; color:#795650;">Our Wedding Day 💍</h3>
-  <div id="wedding-countdown" style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap; color:#795650;">
-    <div><strong id="cd-days" style="font-size:26px;">--</strong><br><small>Days</small></div>
-    <div><strong id="cd-hours" style="font-size:26px;">--</strong><br><small>Hours</small></div>
-    <div><strong id="cd-minutes" style="font-size:26px;">--</strong><br><small>Minutes</small></div>
-    <div><strong id="cd-seconds" style="font-size:26px;">--</strong><br><small>Seconds</small></div>
+
+<section class="welcome" id="welcome">
+  <div class="welcome-card">
+    <div class="small">Together with our families</div>
+    <div class="heart">♥</div>
+    <h1 class="names">Naveen<br><span style="font-size:25px">&</span><br>Deekshi</h1>
+    <div class="small">Invite you to celebrate our love</div>
+    <p class="date">15 · NOVEMBER · 2026</p>
+    <button class="open-btn" onclick="openInvitation()">OPEN INVITATION ♡</button>
   </div>
-</div>
-      <div class="detail">
-        <strong>Muhurtham</strong>
-        <span>7:00 – 8:30</span>
+</section>
+
+<main class="page hidden" id="fullInvitation">
+  <article class="invitation">
+    <header class="hero">
+      <div class="ornament">❧ ✿ ❧</div>
+      <p class="small">With love and blessings</p>
+      <h1>Naveen & Deekshi</h1>
+      <p class="subtitle">A NEW CHAPTER · A LIFETIME OF LOVE</p>
+      <div class="photo-frame">
+        <img src="couple-photo.jpg" alt="Naveen and Deekshi together" onerror="this.alt='Please check the couple-photo.jpg filename in GitHub';this.style.minHeight='100px'">
       </div>
-      <div class="detail">
-        <strong>Venue</strong>
-        <span class="venue">Kalaingar Kottam</span>
-        <span>Kattur, Thiruvarur</span>
+      <p class="note">Two hearts, one beautiful journey.<br>We would be honoured to have you with us.</p>
+      <div class="ornament">❀ ❧ ❀</div>
+    </header>
+
+    <section class="section">
+      <p class="small">The celebrations begin</p>
+      <h2>Wedding Reception</h2>
+      <p class="date-big">14 November 2026</p>
+      <p class="time">7:00 PM onwards</p>
+      <p class="venue">Kalaingar Kottam<br>Kattur, Thiruvarur</p>
+    </section>
+
+    <section class="section">
+      <p class="small">The day we begin forever</p>
+      <h2>Our Wedding</h2>
+      <p class="date-big">15 November 2026</p>
+      <p class="time">Muhurtham · 7:00 AM – 8:30 AM</p>
+      <p class="venue">Kalaingar Kottam<br>Kattur, Thiruvarur</p>
+      <div class="links">
+        <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Kalaingar+Kottam%2C+Kattur%2C+Thiruvarur">GET DIRECTIONS ↗</a>
       </div>
-    </div>
-    <p class="blessing">Your presence and blessings will make our special day even more beautiful.</p>
-    <div class="actions">
-      
-<a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Kalaingar+Kottam%2C+Kattur%2C+Thiruvarur">Get directions ↗</a>
-      <button class="btn" onclick="shareInvite()">Share invitation ↗</button>
-      <button class="btn" onclick="downloadCalendar()">Save date</button>
-    </div>
-    <div class="footer">A new chapter • A lifetime of love</div>
+    </section>
+
+    <section class="section">
+      <p class="small">Every second brings us closer</p>
+      <h2>Counting Down to Forever</h2>
+      <div class="countdown" id="countdown">
+        <div class="unit"><strong id="days">--</strong><span>Days</span></div>
+        <div class="unit"><strong id="hours">--</strong><span>Hours</span></div>
+        <div class="unit"><strong id="minutes">--</strong><span>Minutes</span></div>
+        <div class="unit"><strong id="seconds">--</strong><span>Seconds</span></div>
+      </div>
+      <p class="note" id="countdownMessage"></p>
+    </section>
+
+    <section class="section">
+      <p class="note">Your presence, love and blessings will make our special day even more memorable.</p>
+      <div class="links">
+        <button onclick="downloadCalendar()">SAVE BOTH DATES ♡</button>
+        <button onclick="shareInvitation()">SHARE INVITATION ↗</button>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="ornament" style="color:#f0d7bc">❧ ✿ ❧</div>
+      <p>With love,<br><strong>Naveen & Deekshi</strong></p>
+      <p class="small">15 November 2026 · Forever begins</p>
+    </footer>
   </article>
 </main>
+
 <script>
-const eventTitle = "Wedding of Deekshitha & Naveenkumar";
-function shareInvite() {
-  const data = { title: eventTitle, text: "Please join us for our wedding on 15 November 2026 at Kalaingar Kottam, Kattur, Thiruvarur.", url: location.href };
-  if (navigator.share) navigator.share(data).catch(() => {});
-  else if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(() => alert("Invitation link copied!"));
-  else prompt("Copy your invitation link:", location.href);
+function openInvitation(){
+  document.getElementById("welcome").classList.add("hidden");
+  document.getElementById("fullInvitation").classList.remove("hidden");
+  window.scrollTo(0,0);
+  history.replaceState(null,"","#invitation");
+  updateCountdown();
 }
-
-function downloadCalendar() {
-  const ics = [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "PRODID:-//Deekshitha and Naveenkumar//EN",
-    "CALSCALE:GREGORIAN",
-    "BEGIN:VEVENT",
-    "UID:reception-20261114@example.com",
-    "DTSTAMP:20261023T000000Z",
-    "DTSTART:20261114T133000Z",
-    "DTEND:20261114T153000Z",
-    "SUMMARY:Reception of Deekshitha & Naveenkumar",
-    "LOCATION:Kalaingar Kottam, Kattur, Thiruvarur",
-    "END:VEVENT",
-    "BEGIN:VEVENT",
-    "UID:wedding-20261115@example.com",
-    "DTSTAMP:20261023T000000Z",
-    "DTSTART:20261115T013000Z",
-    "DTEND:20261115T030000Z",
-    "SUMMARY:Wedding of Deekshitha & Naveenkumar",
-    "LOCATION:Kalaingar Kottam, Kattur, Thiruvarur",
-    "END:VEVENT",
-    "END:VCALENDAR"
-  ].join("\r\n");
-
-  const blob = new Blob([ics], {
-    type: "text/calendar;charset=utf-8"
-  });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "Deekshitha-Naveenkumar-Wedding.ics";
-  a.click();
-  URL.revokeObjectURL(a.href);
-}
-  
-function updateWeddingCountdown() {
-  const weddingDate = new Date("2026-11-15T07:00:00+05:30").getTime();
-  const now = Date.now();
-  const remaining = weddingDate - now;
-  const countdown = document.getElementById("wedding-countdown");
-
-  if (remaining <= 0) {
-    countdown.innerHTML = "<h3>Our forever begins! 💍</h3>";
+function updateCountdown(){
+  const target=new Date("2026-11-15T07:00:00+05:30").getTime();
+  const remaining=target-Date.now();
+  if(remaining<=0){
+    document.getElementById("countdown").innerHTML="<p>Our forever begins! ♥</p>";
+    document.getElementById("countdownMessage").textContent="With love, Naveen & Deekshi";
     return;
   }
-
-  document.getElementById("cd-days").textContent =
-    Math.floor(remaining / (1000 * 60 * 60 * 24));
-
-  document.getElementById("cd-hours").textContent =
-    Math.floor((remaining / (1000 * 60 * 60)) % 24);
-
-  document.getElementById("cd-minutes").textContent =
-    Math.floor((remaining / (1000 * 60)) % 60);
-
-  document.getElementById("cd-seconds").textContent =
-    Math.floor((remaining / 1000) % 60);
+  document.getElementById("days").textContent=Math.floor(remaining/86400000);
+  document.getElementById("hours").textContent=Math.floor(remaining/3600000)%24;
+  document.getElementById("minutes").textContent=Math.floor(remaining/60000)%60;
+  document.getElementById("seconds").textContent=Math.floor(remaining/1000)%60;
 }
-
-updateWeddingCountdown();
-setInterval(updateWeddingCountdown, 1000);
+function downloadCalendar(){
+  const events=[
+    ["reception","20261114T133000Z","20261114T153000Z","Wedding Reception - Naveen & Deekshi"],
+    ["wedding","20261115T013000Z","20261115T030000Z","Wedding of Naveen & Deekshi"]
+  ];
+  const lines=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Naveen and Deekshi//EN","CALSCALE:GREGORIAN"];
+  events.forEach(e=>{
+    lines.push("BEGIN:VEVENT","UID:"+e[0]+"-naveen-deekshi-2026@example.com","DTSTAMP:20261023T000000Z","DTSTART:"+e[1],"DTEND:"+e[2],"SUMMARY:"+e[3],"LOCATION:Kalaingar Kottam, Kattur, Thiruvarur","END:VEVENT");
+  });
+  lines.push("END:VCALENDAR");
+  const blob=new Blob([lines.join("\r\n")],{type:"text/calendar;charset=utf-8"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");a.href=url;a.download="Naveen-Deekshi-Events.ics";a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function shareInvitation(){
+  const data={title:"Naveen & Deekshi - Wedding Invitation",text:"Join us for our wedding on 15 November 2026 and reception on 14 November 2026.",url:location.href.split("#")[0]};
+  if(navigator.share)navigator.share(data).catch(()=>{});
+  else if(navigator.clipboard)navigator.clipboard.writeText(data.url).then(()=>alert("Invitation link copied!")).catch(()=>prompt("Copy your invitation link:",data.url));
+  else prompt("Copy your invitation link:",data.url);
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+if(location.hash==="#invitation")openInvitation();
 </script>
 </body>
 </html>
